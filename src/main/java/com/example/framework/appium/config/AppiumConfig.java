@@ -19,7 +19,7 @@ public class AppiumConfig {
 
     public AppiumConfig() {
         properties = ConfigLoader.loadProperties("src/main/resources/appium-local.properties",
-                "src/main/resources/appium-local-default");
+                "src/main/resources/appium-local-default.properties");
 
         androidServerPort = Integer.parseInt(properties.getProperty("android.server.port"));
         iOSServerPort = Integer.parseInt(properties.getProperty("ios.server.port"));
