@@ -15,27 +15,24 @@ import java.util.Properties;
 public class ConfigLoader {
 
     public static Properties loadProperties(String path, String defaultPath) {
+        Properties properties;
+        properties = new Properties();
+        InputStream inputStream;
         try {
-            Properties properties = new Properties();
-            InputStream inputStream;
-            if (new File(path).exists()) {
+            if(new File(path).exists()) {
                 inputStream = new FileInputStream(path);
                 properties.load(inputStream);
-            } else {
-                if (StringUtils.isNotBlank(defaultPath)) {
-                    inputStream = new FileInputStream(defaultPath);
-                    properties.load(inputStream);
-                } else {
-                    throw new AppiumException("Could not load properties file for appium");
-                }
+            } else if (StringUtils.isNotBlank(defaultPath)) {
+                inputStream = new FileInputStream(defaultPath);
+                properties.load(inputStream);
             }
-            return properties;
         } catch (IOException e) {
-            throw new AppiumException(e.getMessage());
+            throw new AppiumException("Could not load properties file for appium");
         }
+        return properties;
     }
 
-    public static Properties loadProperties(String path) {
+    public static  Properties loadProperties(String path) {
         return loadProperties(path, null);
     }
 }

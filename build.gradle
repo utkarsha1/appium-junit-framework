@@ -1,11 +1,8 @@
-buildscript {
-}
-
 apply plugin: 'java'
 apply plugin: 'idea'
 
 jar {
-    baseName = 'appium-ui-tests'
+    baseName = 'appium-junit-framework'
 }
 
 repositories {
@@ -22,8 +19,6 @@ configurations {
     testRuntime.extendsFrom runtime
     integrationCompile.extendsFrom compile
     integrationRuntime.extendsFrom runtime
-
-    all*.exclude(group:'com.google.collections', module:'google-collections')
 }
 
 sourceSets {
@@ -79,7 +74,7 @@ idea.module {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.7'
+    gradleVersion = '2.13'
 }
 
 task zip(type: Zip) {
