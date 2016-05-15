@@ -12,9 +12,9 @@ This framework supports integration tests for native mobile apps. It is written 
 
 * For local development, the following properties must be defined in src/main/resources/appium-local.properties.
 * File is added to .gitignore
-* Start appium servers locally on ports defined in appium-local.properties below````
+* Start appium servers locally on ports defined in appium-local.properties below
 
-
+````
     ios.server.port = 4750
     android.server.port = 4752
 
@@ -22,3 +22,4 @@ This framework supports integration tests for native mobile apps. It is written 
     android.app = /location/for/android/app/apk/app-debug.apk
 
     appium.version = 1.4.16 //latest version
+````
