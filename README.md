@@ -1,12 +1,14 @@
-#Cross-platform Appium UI Tests
 
-Integration tests for your native XYZ app
+
+#Cross-platform UI integration testing framework for mobile
+
+This framework supports integration tests for native mobile apps. It is written using Java 8, JUnit 4.12 and appium-java-client. It's purpose is to write and run cross platform, end to end integration tests on native mobile apps. It is built using gradle (https://gradle.org/getting-started-gradle-java/). It optionally allows for integration with Sauce Labs/AWS Device Farm to run tests in the cloud or runs tests on local appium servers based on configuration specified.
 
 ##iOS and Android
 
-* LoginTest
+* Sample LoginTest to demonstrate usage
 
-## appium-local.properties
+## Sample appium-local.properties
 
 ### For local development, the following properties must be defined in src/main/resources/appium-local.properties. File is added to .gitignore
 
