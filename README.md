@@ -23,7 +23,7 @@ This framework supports integration tests for native mobile apps. It is written 
     ios.app = /file/system/location/for/ios/app/xyz.app
     android.app = /file/system/location/for/android/app/apk/app-debug.apk
 
-    appium.version = 1.4.16 //latest version
+    appium.version = 1.5.2 //latest version
 ````
 
 #### Running your tests on local appium server:
